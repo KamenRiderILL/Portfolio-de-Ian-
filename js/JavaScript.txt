@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Selecciona el título del primer proyecto (<h3> dentro de la tarjeta)
+    const tituloGato = document.querySelector('.proyecto-card h3');
+    
+    // 2. Define los valores de color y tamaño
+    const colorHover = '#ffa500';   // Naranja (al pasar el mouse)
+    const colorBase = '#007bff';    // Azul (definido en CSS)
+    const tamanoHover = '20px';     // Tamaño de letra al pasar el mouse
+    const tamanoBase = '16px';      // Tamaño de letra base (definido en CSS)
+    
+    // 3. Verifica que el elemento fue encontrado antes de añadir los eventos
+    if (tituloGato) {
+        
+        // Evento mouseover (Cuando el mouse ENTRA)
+        tituloGato.addEventListener('mouseover', () => {
+            tituloGato.style.color = colorHover; 
+            tituloGato.style.fontSize = tamanoHover; 
+        });
+
+        // Evento mouseout (Cuando el mouse SALE)
+        tituloGato.addEventListener('mouseout', () => {
+            tituloGato.style.color = colorBase; 
+            tituloGato.style.fontSize = tamanoBase; 
+        });
+    }
+});
